@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='main.css') }}">
+		<title>学生网上评教评价</title>
+	</head>
+	<body>
+    <h1>Hello {{username}}</h1>
+		<form action="" class="indexForm" method="post">
+			<h2>欢迎填写问卷!</h2>
+			<table>
+			    <tr>
+			        <td>一级指标 </td>
+			        <td>二级指标 </td>
+			        <td>指标内涵 </td>
+			        <td>满分</td>
+			        <td>得分(9-10为优，7-8为良，5-6为中，0-4为差)</td>
+			        <td> </td>
+			    </tr>
+			    <tr>
+			        <td>师德师风</td>
+			        <td>师德师风 </td>
+			        <td>为人师表，关心、爱护学生，尊重学生人格，严格要求 </td>
+			        <td>10</td>
+			        <td><input type="text" name="a" placeholder="输入分数" oninput="value=value.replace(/[^\d]/g,'')" maxlength="2"></td>
+			        <td></td>
+			    </tr>
+			    <tr>
+			        <td></td>
+			        <td>教风教态 </td>
+			        <td>教态自然、大方，着装整洁、得体；按时上、下课，不无故缺课、调课 </td>
+			        <td>10</td>
+			        <td><input type="text" name="b" placeholder="输入分数" oninput="value=value.replace(/[^\d]/g,'')" maxlength="2"></td>
+			        <td></td>
+			    </tr>
+			    <tr>
+			        <td></td>
+			        <td></td>
+			        <td>遵守教学纪律，严肃课堂纪律，严格监考，不做与课堂、监考无关的事情 </td>
+			        <td>10</td>
+			        <td><input type="text" name="c" placeholder="输入分数" oninput="value=value.replace(/[^\d]/g,'')" maxlength="2"></td>
+			        <td></td>
+			    </tr>
+			    <tr>
+			        <td> </td>
+			        <td>教学准备 </td>
+			        <td>对教学工作认真、热情、敬业，上课精神饱满，语言生动 </td>
+			        <td>10</td>
+			        <td><input type="text" name="d" placeholder="输入分数" oninput="value=value.replace(/[^\d]/g,'')" maxlength="2"></td>
+			        <td></td>
+			    </tr>
+			    <tr>
+			        <td> </td>
+			        <td>作业辅导 </td>
+			        <td>布置作业或安排实践活动适当，批改作业或辅导答疑及时、耐心，经常与学生交流 </td>
+			        <td>10</td>
+			        <td><input type="text" name="e" placeholder="输入分数" oninput="value=value.replace(/[^\d]/g,'')" maxlength="2"></td>
+			        <td></td>
+			    </tr>
+			    <tr>
+			        <td>教学内容</td>
+			        <td>信息量 </td>
+			        <td>信息量适度，吸收学科新成果，反映学科前沿状况，充实更新教学内容 </td>
+			        <td>10</td>
+			        <td><input type="text" name="f" placeholder="输入分数" oninput="value=value.replace(/[^\d]/g,'')" maxlength="2"></td>
+			        <td></td>
+			    </tr>
+			    <tr>
+			        <td></td>
+			        <td>科学性 </td>
+			        <td>基本概念准确清晰，逻辑结构合理，阐述科学严谨，观点正确，条理清晰，系统性强 </td>
+			        <td></td>
+			        <td></td>
+			        <td></td>
+			    </tr>
+			    <tr>
+			        <td>教学方法</td>
+			        <td>教学方法应用 </td>
+			        <td>善于启发诱导，教学方法灵活多样， 师生互动活跃，启发学生思维，学生分析问题、解决问题能力、学习能力得到提高 </td>
+			        <td>10</td>
+			        <td><input type="text" name="g" placeholder="输入分数" oninput="value=value.replace(/[^\d]/g,'')" maxlength="2"></td>
+			        <td></td>
+			    </tr>
+			    <tr>
+			        <td></td>
+			        <td>教学手段使用 </td>
+			        <td>教学手段运用恰当，合理运用现代化教育技术手段，板书工整规范，用字标准，无错别字 </td>
+			        <td></td>
+			        <td></td>
+			        <td></td>
+			    </tr>
+			    <tr>
+			        <td>教学能力 </td>
+			        <td>教学内容处理能力 </td>
+			        <td>重点突出，难度、深度适宜，理论联系实际 </td>
+			        <td>10</td>
+			        <td><input type="text" name="h" placeholder="输入分数" oninput="value=value.replace(/[^\d]/g,'')" maxlength="2"></td>
+			        <td></td>
+			    </tr>
+			    <tr>
+			        <td></td>
+			        <td>语言表达能力 </td>
+			        <td>普通话标准，语言生动流畅，深入浅出，感染力强 </td>
+			        <td></td>
+			        <td></td>
+			        <td></td>
+			    </tr>
+			    <tr>
+			        <td>教学效果</td>
+			        <td>内容理解与课堂气氛 </td>
+			        <td>学生能较好地理解并掌握主要教学内容，学生上课积极性高，教学秩序好，课堂气氛活跃 </td>
+			        <td>10</td>
+			        <td><input type="text" name="i" placeholder="输入分数" oninput="value=value.replace(/[^\d]/g,'')" maxlength="2"></td>
+			        <td></td>
+			    </tr>
+			    <tr>
+			        <td></td>
+			        <td>教学进度与节奏 </td>
+			        <td>教学进度节奏适中，能有效利用上课时间，上课效率高 </td>
+			        <td>10</td>
+			        <td><input type="text" name="j" placeholder="输入分数" oninput="value=value.replace(/[^\d]/g,'')" maxlength="2"></td>
+			        <td></td>
+			    </tr>
+			</table>
+			<button type="submit">提交</button>
+		</form>
+	</body>
+</html>
