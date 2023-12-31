@@ -52,7 +52,7 @@ def select():
             if username1==stuname[j]:
                 k=j
                 break
-        return render_template('select.html', name=username,slt_name=username1,data=temp[k])
+        return render_template('../static/../templates/select.html', name=username, slt_name=username1, data=temp[k])
 cur.close()
 if __name__ == "__main__":
     app.run()
