@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="/static/login.css" />
 
     <title>登录</title>
 </head>
@@ -11,13 +11,13 @@
 
     <!--将登陆信息放到一个form中-->
     <form method="POST" class="login-form">
-        <h2>登录</h2>
+        <h2 style="text-align: center">登录</h2>
         <input type="text" name="username" placeholder="请输入用户名" />
         <br/>
         <input type="password" name="password" placeholder="请输入密码" />
         <br/>
          <!--jinja2的函数-->
-        {% if message %} {{message}} {% endif %}
+        <p>{% if message %} {{message}} {% endif %}</p>
         <br/>
         <input type="submit" value="登录" />
         <input type="reset" value="重置" />
